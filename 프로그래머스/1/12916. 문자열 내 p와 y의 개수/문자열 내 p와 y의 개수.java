@@ -12,5 +12,7 @@ class Solution {
         String noY = s.toLowerCase().replace("y", "");
         
         return noP.length() == noY.length() ? true : false;
+        
+        
     }
 }
