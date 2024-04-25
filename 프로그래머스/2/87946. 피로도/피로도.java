@@ -1,4 +1,24 @@
 class Solution {
+    
+    /*
+        2시간 정도 헤매다가 완전탐색의 예제만 보려다가 하필 본 포스팅이 이 문제와 같아서 허무하게 풀어버렸다.
+        
+        그래도 배워야 할 점
+        깊이 우선 탐색을 할 때에는 내가 들어간 깊이(depth)를 저장해야 하고 이 것을 이용해서 풀어야 한다.
+        
+        이 풀이의 경우는 visited로 방문을 체크하고 방문하지 않은 곳을 들어갈 때 마다 depth를 증가시켜 최대 탐사수를 구했다.
+        
+        재귀를 하다보면 전역 변수의 값이 모두 true가 될 수 있기에 
+        
+        visited[i] = true;
+        dfs(depth + 1, k - dungeons[i][1], dungeons);
+        visited[i] = false;
+        
+        이렇게 false로 바꿔줘야 하는 것도 중요하다.
+    */
+    
+    
+    
     public int answer;
     public boolean[] visited;
     
@@ -29,23 +49,25 @@ class Solution {
     
     
     
+    /*
+        생쑈의 흔적
+    */
     
-    
-    private int tiredCount(int k, int[][] dungeons){
-        int count = 0;
-        int tired = k;
-        for(int i = 0; i < dungeons.length; i++ ){
-            System.out.print("tired = " + tired +" minT = " + dungeons[i][0] + "/" + dungeons[i][1]);
+//     private int tiredCount(int k, int[][] dungeons){
+//         int count = 0;
+//         int tired = k;
+//         for(int i = 0; i < dungeons.length; i++ ){
+//             System.out.print("tired = " + tired +" minT = " + dungeons[i][0] + "/" + dungeons[i][1]);
             
-            if(dungeons[i][0] < tired){
-                tired -= dungeons[i][1];
-                count++;
-            } 
-        }
-        System.out.println();
-        System.out.println(count);
+//             if(dungeons[i][0] < tired){
+//                 tired -= dungeons[i][1];
+//                 count++;
+//             } 
+//         }
+//         System.out.println();
+//         System.out.println(count);
         
-        return count;
-    }
+//         return count;
+//     }
     
 }
