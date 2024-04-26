@@ -1,5 +1,15 @@
 class Solution {
     public String solution(String X, String Y) {
+       
+        /*
+            2중 반복문을 선택하여 풀었을 때 예제는 풀렸지만 체점과정에서 시간초과 문제 발생
+            
+            중복된 문자를 저장하는 것이 아닌 0~9까지의 갯수를 배열로 저장하고
+            중복된 만큼 숫자를 반복하는 방식으로 변환
+        */
+        
+        
+        
         String answer = "";
         int[] arrX= new int[10];
         int[] arrY= new int[10];
